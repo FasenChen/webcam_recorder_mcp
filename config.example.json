@@ -1,0 +1,13 @@
+{
+  "video_device": "HD Pro Webcam C920",
+  "audio_device": null,
+  "input_format": "mjpeg",
+  "width": 1920,
+  "height": 1080,
+  "framerate": 30,
+  "output_dir": "data/recordings",
+  "ffmpeg_path": "ffmpeg",
+  "ffprobe_path": "ffprobe",
+  "start_timeout_seconds": 20,
+  "stop_timeout_seconds": 15
+}

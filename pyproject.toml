@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "webcam-recorder-mcp"
+version = "0.1.0"
+description = "Windows webcam recording over MCP stdio for automated test evidence"
+requires-python = ">=3.12,<3.14"
+dependencies = ["mcp==1.30.0", "pydantic==2.14.1"]
+
+[project.optional-dependencies]
+dev = ["pytest==8.4.2", "pytest-asyncio==1.2.0", "ruff==0.14.0"]
+
+[project.scripts]
+webcam-recorder-mcp = "webcam_recorder_mcp.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+addopts = "-p no:cacheprovider"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
