@@ -1,0 +1,1 @@
+"""Webcam Recorder MCP."""

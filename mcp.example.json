@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "webcam": {
+      "command": "<REPO>/.venv/Scripts/python.exe",
+      "args": ["-m", "webcam_recorder_mcp", "--config", "config.json"],
+      "cwd": "<REPO>",
+      "env": {"PYTHONUTF8": "1"}
+    }
+  }
+}
